@@ -30,14 +30,11 @@ class RecipeTableView: CollapsibleTableSectionViewController, RecipeDBProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         
         recipeDB = RecipeDB()
         recipeDB?.delegate = self
-        
-       // recipeDB?.getStepsList("eT6DGBNDZhG11moutq8t")
-      //  recipeDB?.getIngredientList("eT6DGBNDZhG11moutq8t")
-       // recipeID = "eT6DGBNDZhG11moutq8t"
-        
+                
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addRecipeTapped))
     }
     
