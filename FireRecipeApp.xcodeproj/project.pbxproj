@@ -1,0 +1,906 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2054C275A9733311FD78041A /* Pods_FireRecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401FC3EE93AA5E9530615A4B /* Pods_FireRecipeApp.framework */; };
+		835DDB0A28CF079700B47F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB0928CF079700B47F07 /* AppDelegate.swift */; };
+		835DDB0C28CF079700B47F07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB0B28CF079700B47F07 /* SceneDelegate.swift */; };
+		835DDB0E28CF079700B47F07 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB0D28CF079700B47F07 /* LoginView.swift */; };
+		835DDB1128CF079700B47F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835DDB0F28CF079700B47F07 /* Main.storyboard */; };
+		835DDB1428CF079700B47F07 /* FireRecipeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB1228CF079700B47F07 /* FireRecipeApp.xcdatamodeld */; };
+		835DDB1628CF079A00B47F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835DDB1528CF079A00B47F07 /* Assets.xcassets */; };
+		835DDB1928CF079A00B47F07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835DDB1728CF079A00B47F07 /* LaunchScreen.storyboard */; };
+		835DDB2428CF079B00B47F07 /* FireRecipeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB2328CF079B00B47F07 /* FireRecipeAppTests.swift */; };
+		835DDB2E28CF079B00B47F07 /* FireRecipeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB2D28CF079B00B47F07 /* FireRecipeAppUITests.swift */; };
+		835DDB3028CF079B00B47F07 /* FireRecipeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB2F28CF079B00B47F07 /* FireRecipeAppUITestsLaunchTests.swift */; };
+		835DDB3D28CF274D00B47F07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 835DDB3C28CF274D00B47F07 /* GoogleService-Info.plist */; };
+		835DDB4028CF2E5500B47F07 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 835DDB3F28CF2E5500B47F07 /* FirebaseAuth */; };
+		835DDB4228CF2E5500B47F07 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 835DDB4128CF2E5500B47F07 /* FirebaseDatabase */; };
+		835DDB4428CF2E5500B47F07 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 835DDB4328CF2E5500B47F07 /* FirebaseFirestore */; };
+		835DDB4628CF2E5500B47F07 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 835DDB4528CF2E5500B47F07 /* FirebaseStorage */; };
+		835DDB4928CF2F4C00B47F07 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 835DDB4828CF2F4C00B47F07 /* FirebaseDatabaseSwift */; };
+		835DDB4B28CF2F4C00B47F07 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 835DDB4A28CF2F4C00B47F07 /* FirebaseFirestoreSwift */; };
+		835DDB4D28D0256300B47F07 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB4C28D0256200B47F07 /* Models.swift */; };
+		835DDB4F28D02EEE00B47F07 /* RecipeDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB4E28D02EEE00B47F07 /* RecipeDB.swift */; };
+		835DDB5828D1D63400B47F07 /* RecipeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB5728D1D63400B47F07 /* RecipeTableView.swift */; };
+		835DDB5C28D207C600B47F07 /* ModelsForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB5B28D207C600B47F07 /* ModelsForTableView.swift */; };
+		835DDB5E28D20A4C00B47F07 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB5D28D20A4C00B47F07 /* CustomCell.swift */; };
+		835DDB6028D24E9700B47F07 /* RecipeDetailsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB5F28D24E9700B47F07 /* RecipeDetailsTableView.swift */; };
+		835DDB6228D2736A00B47F07 /* CustomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DDB6128D2736A00B47F07 /* CustomDetailCell.swift */; };
+		9D74BC268B116C1E5E3615A6 /* Pods_FireRecipeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F22CA6203176E2B5B08F1B /* Pods_FireRecipeAppTests.framework */; };
+		EBD64A73EA6C0013162B82B5 /* Pods_FireRecipeApp_FireRecipeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE939E669B4FEA7E3DFEEB67 /* Pods_FireRecipeApp_FireRecipeAppUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		835DDB2028CF079B00B47F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 835DDAFE28CF079700B47F07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835DDB0528CF079700B47F07;
+			remoteInfo = FireRecipeApp;
+		};
+		835DDB2A28CF079B00B47F07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 835DDAFE28CF079700B47F07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835DDB0528CF079700B47F07;
+			remoteInfo = FireRecipeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C9C8FA8C3E851A8A8EBC0BB /* Pods-FireRecipeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecipeAppTests.release.xcconfig"; path = "Target Support Files/Pods-FireRecipeAppTests/Pods-FireRecipeAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		401FC3EE93AA5E9530615A4B /* Pods_FireRecipeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireRecipeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D9C1C148188C0D2EEF6AAF9 /* Pods-FireRecipeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecipeApp.debug.xcconfig"; path = "Target Support Files/Pods-FireRecipeApp/Pods-FireRecipeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		69F22CA6203176E2B5B08F1B /* Pods_FireRecipeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireRecipeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		835DDB0628CF079700B47F07 /* FireRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		835DDB0928CF079700B47F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		835DDB0B28CF079700B47F07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		835DDB0D28CF079700B47F07 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		835DDB1028CF079700B47F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		835DDB1328CF079700B47F07 /* FireRecipeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FireRecipeApp.xcdatamodel; sourceTree = "<group>"; };
+		835DDB1528CF079A00B47F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		835DDB1828CF079A00B47F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		835DDB1A28CF079A00B47F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		835DDB1F28CF079B00B47F07 /* FireRecipeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireRecipeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		835DDB2328CF079B00B47F07 /* FireRecipeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireRecipeAppTests.swift; sourceTree = "<group>"; };
+		835DDB2928CF079B00B47F07 /* FireRecipeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireRecipeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		835DDB2D28CF079B00B47F07 /* FireRecipeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireRecipeAppUITests.swift; sourceTree = "<group>"; };
+		835DDB2F28CF079B00B47F07 /* FireRecipeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireRecipeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		835DDB3C28CF274D00B47F07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		835DDB4C28D0256200B47F07 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		835DDB4E28D02EEE00B47F07 /* RecipeDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDB.swift; sourceTree = "<group>"; };
+		835DDB5728D1D63400B47F07 /* RecipeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableView.swift; sourceTree = "<group>"; };
+		835DDB5B28D207C600B47F07 /* ModelsForTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsForTableView.swift; sourceTree = "<group>"; };
+		835DDB5D28D20A4C00B47F07 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		835DDB5F28D24E9700B47F07 /* RecipeDetailsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsTableView.swift; sourceTree = "<group>"; };
+		835DDB6128D2736A00B47F07 /* CustomDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailCell.swift; sourceTree = "<group>"; };
+		A2F990D6AE616DA44207DC77 /* Pods-FireRecipeApp-FireRecipeAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecipeApp-FireRecipeAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FireRecipeApp-FireRecipeAppUITests/Pods-FireRecipeApp-FireRecipeAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A89BF7539A61CCE848CE656B /* Pods-FireRecipeApp-FireRecipeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecipeApp-FireRecipeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FireRecipeApp-FireRecipeAppUITests/Pods-FireRecipeApp-FireRecipeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AFE17DF789F25EBFDDEC5470 /* Pods-FireRecipeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecipeApp.release.xcconfig"; path = "Target Support Files/Pods-FireRecipeApp/Pods-FireRecipeApp.release.xcconfig"; sourceTree = "<group>"; };
+		F21FEF464F7A3CB20A9C7C93 /* Pods-FireRecipeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireRecipeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FireRecipeAppTests/Pods-FireRecipeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE939E669B4FEA7E3DFEEB67 /* Pods_FireRecipeApp_FireRecipeAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireRecipeApp_FireRecipeAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		835DDB0328CF079700B47F07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835DDB4928CF2F4C00B47F07 /* FirebaseDatabaseSwift in Frameworks */,
+				835DDB4228CF2E5500B47F07 /* FirebaseDatabase in Frameworks */,
+				835DDB4628CF2E5500B47F07 /* FirebaseStorage in Frameworks */,
+				835DDB4028CF2E5500B47F07 /* FirebaseAuth in Frameworks */,
+				835DDB4428CF2E5500B47F07 /* FirebaseFirestore in Frameworks */,
+				835DDB4B28CF2F4C00B47F07 /* FirebaseFirestoreSwift in Frameworks */,
+				2054C275A9733311FD78041A /* Pods_FireRecipeApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835DDB1C28CF079B00B47F07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D74BC268B116C1E5E3615A6 /* Pods_FireRecipeAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835DDB2628CF079B00B47F07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD64A73EA6C0013162B82B5 /* Pods_FireRecipeApp_FireRecipeAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D9415A2EC2CE21D05BF8922 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D9C1C148188C0D2EEF6AAF9 /* Pods-FireRecipeApp.debug.xcconfig */,
+				AFE17DF789F25EBFDDEC5470 /* Pods-FireRecipeApp.release.xcconfig */,
+				A2F990D6AE616DA44207DC77 /* Pods-FireRecipeApp-FireRecipeAppUITests.debug.xcconfig */,
+				A89BF7539A61CCE848CE656B /* Pods-FireRecipeApp-FireRecipeAppUITests.release.xcconfig */,
+				F21FEF464F7A3CB20A9C7C93 /* Pods-FireRecipeAppTests.debug.xcconfig */,
+				0C9C8FA8C3E851A8A8EBC0BB /* Pods-FireRecipeAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E4FD7DC79F0BFBA08F610D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				401FC3EE93AA5E9530615A4B /* Pods_FireRecipeApp.framework */,
+				FE939E669B4FEA7E3DFEEB67 /* Pods_FireRecipeApp_FireRecipeAppUITests.framework */,
+				69F22CA6203176E2B5B08F1B /* Pods_FireRecipeAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		835DDAFD28CF079700B47F07 = {
+			isa = PBXGroup;
+			children = (
+				835DDB0828CF079700B47F07 /* FireRecipeApp */,
+				835DDB2228CF079B00B47F07 /* FireRecipeAppTests */,
+				835DDB2C28CF079B00B47F07 /* FireRecipeAppUITests */,
+				835DDB0728CF079700B47F07 /* Products */,
+				2D9415A2EC2CE21D05BF8922 /* Pods */,
+				3E4FD7DC79F0BFBA08F610D6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		835DDB0728CF079700B47F07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				835DDB0628CF079700B47F07 /* FireRecipeApp.app */,
+				835DDB1F28CF079B00B47F07 /* FireRecipeAppTests.xctest */,
+				835DDB2928CF079B00B47F07 /* FireRecipeAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		835DDB0828CF079700B47F07 /* FireRecipeApp */ = {
+			isa = PBXGroup;
+			children = (
+				835DDB0928CF079700B47F07 /* AppDelegate.swift */,
+				835DDB0B28CF079700B47F07 /* SceneDelegate.swift */,
+				835DDB4E28D02EEE00B47F07 /* RecipeDB.swift */,
+				835DDB5028D1BCA500B47F07 /* Models */,
+				835DDB5128D1BCC100B47F07 /* Views */,
+				835DDB0F28CF079700B47F07 /* Main.storyboard */,
+				835DDB1528CF079A00B47F07 /* Assets.xcassets */,
+				835DDB1728CF079A00B47F07 /* LaunchScreen.storyboard */,
+				835DDB1A28CF079A00B47F07 /* Info.plist */,
+				835DDB1228CF079700B47F07 /* FireRecipeApp.xcdatamodeld */,
+				835DDB3C28CF274D00B47F07 /* GoogleService-Info.plist */,
+			);
+			path = FireRecipeApp;
+			sourceTree = "<group>";
+		};
+		835DDB2228CF079B00B47F07 /* FireRecipeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				835DDB2328CF079B00B47F07 /* FireRecipeAppTests.swift */,
+			);
+			path = FireRecipeAppTests;
+			sourceTree = "<group>";
+		};
+		835DDB2C28CF079B00B47F07 /* FireRecipeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				835DDB2D28CF079B00B47F07 /* FireRecipeAppUITests.swift */,
+				835DDB2F28CF079B00B47F07 /* FireRecipeAppUITestsLaunchTests.swift */,
+			);
+			path = FireRecipeAppUITests;
+			sourceTree = "<group>";
+		};
+		835DDB5028D1BCA500B47F07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				835DDB4C28D0256200B47F07 /* Models.swift */,
+				835DDB5B28D207C600B47F07 /* ModelsForTableView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		835DDB5128D1BCC100B47F07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				835DDB0D28CF079700B47F07 /* LoginView.swift */,
+				835DDB5728D1D63400B47F07 /* RecipeTableView.swift */,
+				835DDB5F28D24E9700B47F07 /* RecipeDetailsTableView.swift */,
+				835DDB5D28D20A4C00B47F07 /* CustomCell.swift */,
+				835DDB6128D2736A00B47F07 /* CustomDetailCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		835DDB0528CF079700B47F07 /* FireRecipeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835DDB3328CF079B00B47F07 /* Build configuration list for PBXNativeTarget "FireRecipeApp" */;
+			buildPhases = (
+				F6FE18237B6307316F392C93 /* [CP] Check Pods Manifest.lock */,
+				835DDB0228CF079700B47F07 /* Sources */,
+				835DDB0328CF079700B47F07 /* Frameworks */,
+				835DDB0428CF079700B47F07 /* Resources */,
+				BE8F5F34FCB5F898CADCF699 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FireRecipeApp;
+			packageProductDependencies = (
+				835DDB3F28CF2E5500B47F07 /* FirebaseAuth */,
+				835DDB4128CF2E5500B47F07 /* FirebaseDatabase */,
+				835DDB4328CF2E5500B47F07 /* FirebaseFirestore */,
+				835DDB4528CF2E5500B47F07 /* FirebaseStorage */,
+				835DDB4828CF2F4C00B47F07 /* FirebaseDatabaseSwift */,
+				835DDB4A28CF2F4C00B47F07 /* FirebaseFirestoreSwift */,
+			);
+			productName = FireRecipeApp;
+			productReference = 835DDB0628CF079700B47F07 /* FireRecipeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		835DDB1E28CF079B00B47F07 /* FireRecipeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835DDB3628CF079B00B47F07 /* Build configuration list for PBXNativeTarget "FireRecipeAppTests" */;
+			buildPhases = (
+				6C7218A9DD2BA8EEE639033D /* [CP] Check Pods Manifest.lock */,
+				835DDB1B28CF079B00B47F07 /* Sources */,
+				835DDB1C28CF079B00B47F07 /* Frameworks */,
+				835DDB1D28CF079B00B47F07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				835DDB2128CF079B00B47F07 /* PBXTargetDependency */,
+			);
+			name = FireRecipeAppTests;
+			productName = FireRecipeAppTests;
+			productReference = 835DDB1F28CF079B00B47F07 /* FireRecipeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		835DDB2828CF079B00B47F07 /* FireRecipeAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835DDB3928CF079B00B47F07 /* Build configuration list for PBXNativeTarget "FireRecipeAppUITests" */;
+			buildPhases = (
+				53D0A9859C41BD464F7B2F80 /* [CP] Check Pods Manifest.lock */,
+				835DDB2528CF079B00B47F07 /* Sources */,
+				835DDB2628CF079B00B47F07 /* Frameworks */,
+				835DDB2728CF079B00B47F07 /* Resources */,
+				7ABEE3344781197CD40B70EC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				835DDB2B28CF079B00B47F07 /* PBXTargetDependency */,
+			);
+			name = FireRecipeAppUITests;
+			productName = FireRecipeAppUITests;
+			productReference = 835DDB2928CF079B00B47F07 /* FireRecipeAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		835DDAFE28CF079700B47F07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					835DDB0528CF079700B47F07 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					835DDB1E28CF079B00B47F07 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 835DDB0528CF079700B47F07;
+					};
+					835DDB2828CF079B00B47F07 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 835DDB0528CF079700B47F07;
+					};
+				};
+			};
+			buildConfigurationList = 835DDB0128CF079700B47F07 /* Build configuration list for PBXProject "FireRecipeApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 835DDAFD28CF079700B47F07;
+			packageReferences = (
+				835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				835DDB4728CF2F4C00B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 835DDB0728CF079700B47F07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				835DDB0528CF079700B47F07 /* FireRecipeApp */,
+				835DDB1E28CF079B00B47F07 /* FireRecipeAppTests */,
+				835DDB2828CF079B00B47F07 /* FireRecipeAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		835DDB0428CF079700B47F07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835DDB1928CF079A00B47F07 /* LaunchScreen.storyboard in Resources */,
+				835DDB3D28CF274D00B47F07 /* GoogleService-Info.plist in Resources */,
+				835DDB1628CF079A00B47F07 /* Assets.xcassets in Resources */,
+				835DDB1128CF079700B47F07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835DDB1D28CF079B00B47F07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835DDB2728CF079B00B47F07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53D0A9859C41BD464F7B2F80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireRecipeApp-FireRecipeAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C7218A9DD2BA8EEE639033D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireRecipeAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ABEE3344781197CD40B70EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireRecipeApp-FireRecipeAppUITests/Pods-FireRecipeApp-FireRecipeAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireRecipeApp-FireRecipeAppUITests/Pods-FireRecipeApp-FireRecipeAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireRecipeApp-FireRecipeAppUITests/Pods-FireRecipeApp-FireRecipeAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE8F5F34FCB5F898CADCF699 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireRecipeApp/Pods-FireRecipeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FireRecipeApp/Pods-FireRecipeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FireRecipeApp/Pods-FireRecipeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6FE18237B6307316F392C93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireRecipeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		835DDB0228CF079700B47F07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835DDB5828D1D63400B47F07 /* RecipeTableView.swift in Sources */,
+				835DDB0E28CF079700B47F07 /* LoginView.swift in Sources */,
+				835DDB5E28D20A4C00B47F07 /* CustomCell.swift in Sources */,
+				835DDB4F28D02EEE00B47F07 /* RecipeDB.swift in Sources */,
+				835DDB6228D2736A00B47F07 /* CustomDetailCell.swift in Sources */,
+				835DDB5C28D207C600B47F07 /* ModelsForTableView.swift in Sources */,
+				835DDB1428CF079700B47F07 /* FireRecipeApp.xcdatamodeld in Sources */,
+				835DDB6028D24E9700B47F07 /* RecipeDetailsTableView.swift in Sources */,
+				835DDB0A28CF079700B47F07 /* AppDelegate.swift in Sources */,
+				835DDB0C28CF079700B47F07 /* SceneDelegate.swift in Sources */,
+				835DDB4D28D0256300B47F07 /* Models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835DDB1B28CF079B00B47F07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835DDB2428CF079B00B47F07 /* FireRecipeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835DDB2528CF079B00B47F07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835DDB3028CF079B00B47F07 /* FireRecipeAppUITestsLaunchTests.swift in Sources */,
+				835DDB2E28CF079B00B47F07 /* FireRecipeAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		835DDB2128CF079B00B47F07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 835DDB0528CF079700B47F07 /* FireRecipeApp */;
+			targetProxy = 835DDB2028CF079B00B47F07 /* PBXContainerItemProxy */;
+		};
+		835DDB2B28CF079B00B47F07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 835DDB0528CF079700B47F07 /* FireRecipeApp */;
+			targetProxy = 835DDB2A28CF079B00B47F07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		835DDB0F28CF079700B47F07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				835DDB1028CF079700B47F07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		835DDB1728CF079A00B47F07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				835DDB1828CF079A00B47F07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		835DDB3128CF079B00B47F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		835DDB3228CF079B00B47F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		835DDB3428CF079B00B47F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D9C1C148188C0D2EEF6AAF9 /* Pods-FireRecipeApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B34RQ28Z5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FireRecipeApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FuerteFrancis.FireRecipeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		835DDB3528CF079B00B47F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFE17DF789F25EBFDDEC5470 /* Pods-FireRecipeApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B34RQ28Z5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FireRecipeApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FuerteFrancis.FireRecipeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		835DDB3728CF079B00B47F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F21FEF464F7A3CB20A9C7C93 /* Pods-FireRecipeAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B34RQ28Z5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FuerteFrancis.FireRecipeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireRecipeApp.app/FireRecipeApp";
+			};
+			name = Debug;
+		};
+		835DDB3828CF079B00B47F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C9C8FA8C3E851A8A8EBC0BB /* Pods-FireRecipeAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B34RQ28Z5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FuerteFrancis.FireRecipeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireRecipeApp.app/FireRecipeApp";
+			};
+			name = Release;
+		};
+		835DDB3A28CF079B00B47F07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F990D6AE616DA44207DC77 /* Pods-FireRecipeApp-FireRecipeAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B34RQ28Z5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FuerteFrancis.FireRecipeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FireRecipeApp;
+			};
+			name = Debug;
+		};
+		835DDB3B28CF079B00B47F07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A89BF7539A61CCE848CE656B /* Pods-FireRecipeApp-FireRecipeAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B34RQ28Z5L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FuerteFrancis.FireRecipeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FireRecipeApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		835DDB0128CF079700B47F07 /* Build configuration list for PBXProject "FireRecipeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835DDB3128CF079B00B47F07 /* Debug */,
+				835DDB3228CF079B00B47F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		835DDB3328CF079B00B47F07 /* Build configuration list for PBXNativeTarget "FireRecipeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835DDB3428CF079B00B47F07 /* Debug */,
+				835DDB3528CF079B00B47F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		835DDB3628CF079B00B47F07 /* Build configuration list for PBXNativeTarget "FireRecipeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835DDB3728CF079B00B47F07 /* Debug */,
+				835DDB3828CF079B00B47F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		835DDB3928CF079B00B47F07 /* Build configuration list for PBXNativeTarget "FireRecipeAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835DDB3A28CF079B00B47F07 /* Debug */,
+				835DDB3B28CF079B00B47F07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		835DDB4728CF2F4C00B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		835DDB3F28CF2E5500B47F07 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		835DDB4128CF2E5500B47F07 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		835DDB4328CF2E5500B47F07 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		835DDB4528CF2E5500B47F07 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		835DDB4828CF2F4C00B47F07 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		835DDB4A28CF2F4C00B47F07 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 835DDB3E28CF2E5500B47F07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		835DDB1228CF079700B47F07 /* FireRecipeApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				835DDB1328CF079700B47F07 /* FireRecipeApp.xcdatamodel */,
+			);
+			currentVersion = 835DDB1328CF079700B47F07 /* FireRecipeApp.xcdatamodel */;
+			path = FireRecipeApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 835DDAFE28CF079700B47F07 /* Project object */;
+}

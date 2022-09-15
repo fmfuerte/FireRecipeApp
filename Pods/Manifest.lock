@@ -1,0 +1,16 @@
+PODS:
+  - CollapsibleTableSectionViewController (2.0.1)
+
+DEPENDENCIES:
+  - CollapsibleTableSectionViewController
+
+SPEC REPOS:
+  trunk:
+    - CollapsibleTableSectionViewController
+
+SPEC CHECKSUMS:
+  CollapsibleTableSectionViewController: 40d97d684d870044522a0dc29b128a6acaaa99df
+
+PODFILE CHECKSUM: 932ee84b873aa9f02d313bc496577f6d0d3a756f
+
+COCOAPODS: 1.11.3
